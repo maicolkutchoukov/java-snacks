@@ -14,10 +14,14 @@ public class Snack7 {
         mm = inputSeconds / 60;
         ss = inputSeconds - (mm*60);
         if (mm >= 60){
-            hh= mm / 60;
-            mm= mm - (hh*60);
+            hh = mm / 60;
+            mm = mm - (hh*60);
         }
-        System.out.println("La conversione di " + inputSeconds + "secondi è di: " + hh+":"+mm+":"+ss);
+        String strHh = hh < 10 ? "0" + hh : String.valueOf(hh);
+        String strMm = mm < 10 ? "0" + mm : String.valueOf(mm);
+        String strSs = ss < 10 ? "0" + ss : String.valueOf(ss);
+
+        System.out.println("La conversione di " + inputSeconds + " secondi è di: " + strHh + ":" + strMm + ":" + strSs);
 
 
     }

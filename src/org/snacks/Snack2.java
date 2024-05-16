@@ -16,8 +16,8 @@ public class Snack2 {
         Random randomGenerator = new Random();
         String[] persons = new String[10];
         for (int i = 0; i < persons.length; i++) {
-            int randomNumOne = randomGenerator.nextInt(10);
-            int randomNumTwo = randomGenerator.nextInt(10);
+            int randomNumOne = randomGenerator.nextInt(names.length);
+            int randomNumTwo = randomGenerator.nextInt(surnames.length);
             persons[i] = names[randomNumOne] + ' ' + surnames[randomNumTwo];
         }
         System.out.println(Arrays.toString(persons));

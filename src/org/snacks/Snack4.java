@@ -12,12 +12,12 @@ public class Snack4 {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Inserisci una stringa:");
         String str = scanner.nextLine();
-        String str2 = "";
+        StringBuilder str2 = new StringBuilder();
         for (int i = str.length() - 1; i >= 0; i--) {
             System.out.println(i);
-            str2 += str.charAt(i);
+            str2.append(str.charAt(i));
         }
-        if (str.equals(str2)){
+        if (str.contentEquals(str2)){
             System.out.println("La parola inserita è palindroma");
         } else {
             System.out.println("La parola inserita non è palindroma");
